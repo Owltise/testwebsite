@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsletter Signup</title>
-    <!-- Add your Google Analytics tracking code here -->
+  <title>Newsletter Signup</title>
+  <!-- Add any CSS styles here (if needed) -->
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Newsletter!</h1>
-    </header>
-    <section>
-        <p>Sign up to receive our latest updates and news.</p>
-        <form id="signup-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <button type="submit">Sign Up</button>
-        </form>
-    </section>
-    <footer>
-        &copy; 2023 Your Website Name
-    </footer>
-    <script>
-        // JavaScript code for handling form submission
-        const form = document.getElementById('signup-form');
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
 
-            // You can add code here to send the form data to your server or email service
+<!-- Signup Form -->
+<form id="signupForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br>
 
-            // For Google Analytics, you can track form submissions as an event
-            // Example:
-            // gtag('event', 'signup', {
-            //     'event_category': 'newsletter',
-            //     'event_label': 'Signup Form Submission'
-            // });
-        });
-    </script>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br>
+
+  <button type="submit" id="signupButton1">Sign Up for Newsletter</button>
+</form>
+
+<!-- Second Signup Button -->
+<button id="signupButton2">Sign Up for Newsletter</button>
+
+<!-- Confirmation Message (initially hidden) -->
+<div id="confirmationMessage" style="display: none;">
+  Thank you for signing up! You will receive our newsletter shortly.
+</div>
+
+<script>
+  // Function to show the confirmation page
+  function showConfirmation() {
+    // Hide the signup form and second button
+    document.getElementById("signupForm").style.display = "none";
+    document.getElementById("signupButton2").style.display = "none";
+    // Show the confirmation message
+    document.getElementById("confirmationMessage").style.display = "block";
+  }
+
+  // Attach click event handlers to your signup buttons
+  document.getElementById("signupButton1").addEventListener("click", showConfirmation);
+  document.getElementById("signupButton2").addEventListener("click", showConfirmation);
+
+  // Function to handle form submission
+  document.getElementById("signupForm").addEventListener("submit", function (event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Perform form processing here (e.g., send data to a server)
+
+    // Redirect to the confirmation page
+    window.location.href = "confirmation.html";
+  });
+</script>
+
 </body>
 </html>
