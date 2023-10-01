@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Analytics Course Learning Webpage</title>
+  <style>
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: blue;
+      text-align: center;
+    }
+    p {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      text-align: center;
+    }
+    .form-container {
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-container input[type="text"],
+    .form-container input[type="email"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .form-container button {
+      background-color: blue;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Title -->
+<h1>Google Analytics Course Learning Webpage</h1>
+
+<!-- Subtitle -->
+<p>Subscribe to our newsletter to get more information.</p>
+
+<!-- Signup Form (Newsletter Sign Up) -->
+<div class="form-container">
+  <form id="newsletterSignupForm" action="confirmation.html">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <button type="submit">Sign Up for Newsletter</button>
+  </form>
+</div>
+
+<!-- Signup Form (Newsletter Form Fill) -->
+<div class="form-container">
+  <form id="newsletterFormFill" action="confirmation.html">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+
+</body>
+</html>
