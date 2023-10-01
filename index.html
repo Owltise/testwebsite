@@ -12,66 +12,81 @@
     }
   </style>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PGTZSZV9');</script>
-<!-- End Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PGTZSZV9');
+  </script>
+  <!-- End Google Tag Manager -->
   <!-- Add any additional CSS styles here (if needed) -->
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGTZSZV9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!-- Title -->
-<h1>Newsletter Signup Page</h1>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGTZSZV9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Title -->
+  <h1>Newsletter Signup Page</h1>
 
-<!-- Signup Form -->
-<form id="signupForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required><br>
+  <!-- Signup Form -->
+  <form id="signupForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
 
-  <button type="submit" id="signupButton1">Sign Up for Newsletter</button>
-</form>
+    <button type="submit" id="signupButton1">Sign Up for Newsletter</button>
+  </form>
 
-<!-- Second Signup Button -->
-<button id="signupButton2">Sign Up for Newsletter</button>
+  <!-- Second Signup Button -->
+  <button id="signupButton2">Sign Up for Newsletter</button>
 
-<!-- Confirmation Message (initially hidden) -->
-<div id="confirmationMessage" style="display: none;">
-  Thank you for signing up! You will receive our newsletter shortly.
-</div>
+  <!-- Twitter Share Button -->
+  <a class="twitter-share-button" href="https://twitter.com/intent/tweet?url=https://x.com/googleanalytics/status/1707449008547930149?s=20" target="_blank">
+    Share on Twitter
+  </a>
 
-<script>
-  // Function to show the confirmation page
-  function showConfirmation() {
-    // Hide the signup form and second button
-    document.getElementById("signupForm").style.display = "none";
-    document.getElementById("signupButton2").style.display = "none";
-    // Show the confirmation message
-    document.getElementById("confirmationMessage").style.display = "block";
-  }
+  <!-- Confirmation Message (initially hidden) -->
+  <div id="confirmationMessage" style="display: none;">
+    Thank you for signing up! You will receive our newsletter shortly.
+  </div>
 
-  // Attach click event handlers to your signup buttons
-  document.getElementById("signupButton1").addEventListener("click", showConfirmation);
-  document.getElementById("signupButton2").addEventListener("click", showConfirmation);
+  <script>
+    // Function to show the confirmation page
+    function showConfirmation() {
+      // Hide the signup form and second button
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("signupButton2").style.display = "none";
+      // Show the confirmation message
+      document.getElementById("confirmationMessage").style.display = "block";
+    }
 
-  // Function to handle form submission
-  document.getElementById("signupForm").addEventListener("submit", function (event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
+    // Attach click event handlers to your signup buttons
+    document.getElementById("signupButton1").addEventListener("click", showConfirmation);
+    document.getElementById("signupButton2").addEventListener("click", showConfirmation);
 
-    // Perform form processing here (e.g., send data to a server)
+    // Function to handle form submission
+    document.getElementById("signupForm").addEventListener("submit", function (event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
 
-    // Redirect to the confirmation page
-    window.location.href = "confirmation.html";
-  });
-</script>
+      // Perform form processing here (e.g., send data to a server)
 
+      // Redirect to the confirmation page
+      window.location.href = "confirmation.html";
+    });
+  </script>
 </body>
 </html>
