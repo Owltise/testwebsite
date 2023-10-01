@@ -1,75 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GOOGLE ANALYTICS COURSE LEARNING WEBPAGE</title>
+  <title>Newsletter Signup Page</title>
   <style>
-    body {
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-
+    /* CSS styles for the title */
     h1 {
+      font-family: "Arial", sans-serif;
+      font-weight: bold;
       color: blue;
-      font-weight: bold;
+      text-align: center;
     }
-
-    h2 {
+    /* CSS style for the confirmation message */
+    #confirmationMessage {
+      display: none;
+      text-align: center;
+      font-weight: bold;
       color: green;
-      font-style: italic;
-    }
-
-    .form-container {
-      display: inline-block;
-      margin: 20px;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    input {
-      margin: 10px;
-      padding: 5px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background-color: #0073e6;
-      color: white;
-      border: none;
-      cursor: pointer;
     }
   </style>
+  <!-- Add any additional CSS styles here (if needed) -->
 </head>
 <body>
 
-<!-- Signup Form 1 -->
-<div class="form-container" id="newsletter-signup">
-  <h1>GOOGLE ANALYTICS COURSE LEARNING WEBPAGE</h1>
-  <h2>Subscribe to our newsletter to get more information.</h2>
-  <form id="newsletter-signup-form" action="confirmation.html">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br>
+<!-- Title -->
+<h1>Newsletter Signup Page</h1>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
+<!-- Signup Form -->
+<form id="signupForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br>
 
-    <button type="submit">Sign Up for Newsletter</button>
-  </form>
-</div>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br>
 
-<!-- Signup Form 2 -->
-<div class="form-container" id="newsletter-form-fill">
-  <form id="newsletter-form-fill-form" action="confirmation.html">
-    <label for="name2">Name:</label>
-    <input type="text" id="name2" name="name2" required><br>
+  <button type="button" id="signupButton1">Sign Up for Newsletter</button>
+</form>
 
-    <label for="email2">Email:</label>
-    <input type="email" id="email2" name="email2" required><br>
+<!-- Second Signup Button -->
+<button type="button" id="signupButton2">Sign Up for Newsletter</button>
 
-    <button type="submit">Subscribe</button>
-  </form>
-</div>
+<!-- Confirmation Message (initially hidden) -->
+<div id="confirmationMessage">Thank you for signing up! You will receive our newsletter shortly.</div>
+
+<script>
+  // Function to show the confirmation message
+  function showConfirmation() {
+    // Hide the signup form and second button
+    document.getElementById("signupForm").style.display = "none";
+    document.getElementById("signupButton2").style.display = "none";
+    // Show the confirmation message
+    document.getElementById("confirmationMessage").style.display = "block";
+  }
+
+  // Attach click event handlers to your signup buttons
+  document.getElementById("signupButton1").addEventListener("click", showConfirmation);
+  document.getElementById("signupButton2").addEventListener("click", showConfirmation);
+</script>
 
 </body>
 </html>
